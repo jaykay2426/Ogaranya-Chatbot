@@ -124,6 +124,7 @@ const responses = {
 "is ogaranya legit": "Yes, Ogaranya is a registered Nigerian technology company.",
 "who founded ogaranya": "Ogaranya was founded by Olubodun Akinyele.",
 "when was ogaranya founded": "Ogaranya was founded in 2015.",
+"how do we subscribe to ogaranya": "To subscribe to or use Ogaranya, users primarily interact with the service via SMS or WhatsApp, as it is a text-to-commerce platform.",
 "where is ogaranya located": "Ogaranya is based in Lagos, Nigeria.",
 "is ogaranya Nigerian": "Yes, Ogaranya is a Nigerian company.",
 "what problem does ogaranya solve": "Ogaranya enables digital transactions for users with limited or no internet access.",
@@ -135,6 +136,8 @@ const responses = {
 "how does ogaranya work": "Ogaranya works by allowing users to send simple text commands to buy, book, or pay for services.",
 "does ogaranya need internet": "No, Ogaranya can be used via SMS or USSD without internet.",
 "can i use ogaranya with sms": "Yes, Ogaranya supports SMS-based transactions.",
+"what services does ogaranya provide": "Ogaranya is an Offline-to-Online (O2O) convenience commerce platform designed to facilitate transactions via text-based messaging (SMS), WhatsApp, and USSD, allowing businesses and individuals to buy, sell, and make payments without needing a dedicated app.",
+
 "can i use ogaranya on whatsapp": "Yes, Ogaranya supports WhatsApp commerce.",
 "what is message commerce": "Message commerce allows buying and selling through text or chat messages.",
 "what is ussd payment": "USSD payment allows bank transactions using short codes on mobile phones.",
