@@ -11,7 +11,7 @@
   --text-main: #1a1a1a;
   --text-muted: #6b6b6b;
 
-  --accent-main: #511d86;
+  --accent-main: red;
   --accent-light: #00b14f;
 
   --border-color: #ced4da;
@@ -20,7 +20,11 @@
 /* 🌙 DARK MODE */
 [data-theme="dark"] {
   --bg-main: white;
-  --bg-surface: linear-gradient(
+  --bg-surface: white;
+
+;
+
+--bg-surface-1: linear-gradient(
   0deg,
   white, rgb(222, 226, 250)
 
@@ -30,7 +34,8 @@
   --bg-surface-mid: rgba(163, 151, 151, 0.116);
 
   --text-main: black;
-  --text-muted: rgb(217, 220, 248);
+  --text-muted: red;
+    --text-muted1: blue;
 
   --accent-main: #511d86;
   --accent-light: #00e676;
@@ -48,7 +53,7 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--bg-surface);
+  background: var(--bg-surface-1);
   color: var(--text-main);
 }
 
@@ -143,7 +148,7 @@ body {
 
 .chat-preview {
   font-size: 0.85em;
-  color: var(--text-muted);
+  color: var(--text-main);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -153,6 +158,12 @@ body {
 .chat-item:hover,
 .chat-item.active {
   background: var(--accent-main);
+  color: white;
+}
+
+/* Target chat-preview inside hovered or active chat-item */
+.chat-item:hover .chat-preview,
+.chat-item.active .chat-preview {
   color: white;
 }
 
@@ -176,6 +187,7 @@ body {
   border-bottom: 1px solid rgba(41, 38, 38, 0.219);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header-left {
@@ -186,6 +198,8 @@ body {
 
 .header-left img {
   border-radius: 50%;
+  width: 43px;
+  height: 43px;
   border: 2px solid rgba(41, 38, 38, 0.219);
 }
 
@@ -198,6 +212,29 @@ body {
   font-size: 22px;
   cursor: pointer;
   color: var(--accent-main);
+}
+
+/* HEADER RIGHT - Icons in header */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-right i {
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text-main);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.header-right i:hover {
+  background-color: var(--bg-surface-mid);
 }
 
 /* =========================
@@ -240,6 +277,7 @@ body {
   padding: 10px;
   background: var(--bg-main);
   border-top: 1px solid rgba(41, 38, 38, 0.219);
+  align-items: center;
 }
 
 .chat-input input {
@@ -303,3 +341,4 @@ body {
     display: block;
   }
 }
+	
