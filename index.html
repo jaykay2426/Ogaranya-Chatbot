@@ -5,7 +5,87 @@
   <title>AI Chat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Bootstrap --><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OgaChat AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="ogaranya-logo.png" alt="Ogaranya Logo" class="sidebar-logo" style="height: 40px; width: 180px;"/>
+    </div>
+
+    <div class="sidebar-search">
+      <input type="text" placeholder="Search chats..." id="searchInput" />
+    </div>
+
+    <div class="chat-list" id="chatList"></div>
+  </aside>
+
+  <!-- CHAT AREA -->
+  <main class="chat-area" id="chatArea">
+
+    <!-- HEADER -->
+    <div class="chat-header">
+      <div class="header-left">
+        <i class="bi bi-arrow-left back-btn" onclick="goBack()"></i>
+        <img id="chatAvatar" src="ogaranya-logo1.png" />
+        <div>
+          <strong id="chatName">OgaChat AI</strong>
+          <span id="statusDot" class="status-dot online"></span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <i class="bi bi-search"></i>
+        <i class="bi bi-three-dots-vertical"></i>
+      </div>
+    </div>
+
+    <!-- MESSAGES -->
+    <div class="messages" id="messages">
+      <div id="welcomeMessage" class="message received text-center text-muted" style="display:none;">
+        Welcome to OgaChat AI! Start chatting now.
+      </div>
+    </div>
+
+    <!-- TYPING INDICATOR -->
+    <div id="typingIndicator" class="message received" style="display:none;">
+      <span class="typing-dots"><span></span><span></span><span></span></span> OgaChat is typing...
+    </div>
+
+    <!-- INPUT -->
+    <div class="chat-input">
+      <i class="bi bi-paperclip"></i>
+      <input id="messageInput" placeholder="Type a message..." />
+      <button id="sendBtn" onclick="sendMessage()">
+        <i class="bi bi-send-fill"></i>
+      </button>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
+
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
 
